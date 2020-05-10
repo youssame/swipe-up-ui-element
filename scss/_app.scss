@@ -4,6 +4,7 @@
     left: 0;
     top: 0;
     height: calc(100% - 40px);
+    max-width: calc(630px - 40px);
     overflow-y: scroll;
     .btn {
         background: $color-3;
@@ -63,6 +64,7 @@
         right: 5%;
         width: 90%;
         top: 93.5%;
+        max-width: calc(630px - 10%);
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
         box-shadow: -1px -11px 10px 8px $color-1;

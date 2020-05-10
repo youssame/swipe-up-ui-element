@@ -1,0 +1,136 @@
+.app {
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: calc(100% - 40px);
+    overflow-y: scroll;
+    .btn {
+        background: $color-3;
+        padding: 10px;
+        border-radius: 5px;
+        color: $btn-color;
+    }
+    header {
+        background: $color-2;
+        padding: 20px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .posts {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        text-align: left;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        .post {
+            width: 200px;
+            background: $color-2;
+            margin: 0 10px 20px 0;
+            padding-bottom: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            img {
+                width: 100%;
+                display: block;
+            }
+            h2, p {
+                padding-left: 20px;
+                padding-right: 20px;
+                padding-top: 10px;
+                font-size: $default-font-size - 2;
+            }
+            h2 {
+                padding-top: 20px;
+            }
+            p {
+                font-size: $default-font-size - 3;
+                line-height: $default-font-size + 2;
+            }
+        }
+    }
+    .post-content {
+        background: $color-2;
+        transition: top 0.3s;
+        padding: 0 20px 20px 20px;
+        box-sizing: border-box;
+        position: fixed;
+        height: 90%;
+        left: 5%;
+        right: 5%;
+        width: 90%;
+        top: 93.5%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        box-shadow: -1px -11px 10px 8px $color-1;
+        overflow-y: scroll;
+        .btn.close {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            left: calc(50% - 25px);
+            border-radius: 50%;
+            font-size: $default-font-size;
+            padding: 0;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            color: $text-color;
+            background-color: $color-2;
+            border: 0;
+            box-shadow: 0px 0px 20px 0px $text-color;
+        }
+        &.open {
+            top: 10%;
+            .btn.close {
+                display: block;
+            }
+        }
+        img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: $default-font-size + 3;
+            padding-bottom: 20px;
+        }
+        p {
+            font-size: $default-font-size + 1;
+            line-height: $default-font-size + 7;
+        }
+        header {
+            background: inherit;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            box-sizing: border-box;
+
+            &:after {
+                content: '';
+                display: block;
+                background: $color-1;
+                width: 90%;
+                height: 3px;
+                border-radius: 3px;
+                margin: 0 auto;
+            }
+        }
+        section {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: calc(100% - 45px);
+            overflow: scroll;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+    }
+}
